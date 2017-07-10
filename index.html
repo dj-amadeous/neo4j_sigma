@@ -32,7 +32,7 @@
     */
 
     sigma.neo4j.cypher(
-      { url: 'http://localhost:7474', user: 'neo4j', password: 'warden0790' },
+      { url: 'http://localhost:7474', user: 'neo4j', password: 'your_password' },
       'MATCH (n1)-[r]->(n2) RETURN r, n1, n2 LIMIT 25',
       { container: 'graph-container' } ,
       function(s) {
@@ -43,7 +43,7 @@
 
     /*you have to call neo4j to get relationship types, but this doesn't show up on the console so I don't know*/
     sigma.neo4j.getLabels(
-      { url: 'http://localhost:7474', user: 'neo4j', password: 'warden0790' },
+      { url: 'http://localhost:7474', user: 'neo4j', password: 'your_password' },
       function(labels) {
         console.log("Node labels" + labels);
       }
